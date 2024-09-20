@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class level3 {
+public class L1T4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Name");

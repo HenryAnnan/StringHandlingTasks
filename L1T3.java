@@ -1,7 +1,6 @@
-import java.util.Objects;
 import java.util.Scanner;
 
-public class level2 {
+public class L1T3 {
     public static void main(String[] args) {
 
         String password1 = "Password1";
