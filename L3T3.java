@@ -5,38 +5,26 @@ public class L3T3 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter ISBN");
         String ISBN = input.nextLine();
-        int caluclatedCheck = 0;
         int sum = 0;
+        char providedCheckChar = ISBN.charAt(12);
+        int providedCheckInt = Character.getNumericValue(providedCheckChar);
 
-            for (int i =0; i< 12; i++){
-                if(i == 1 || i == 3 || i == 5 || i == 7 || i == 9 || i == 11 || i == 13){
-                    char c = ISBN.charAt(i);
-                    int num = Character.getNumericValue(c);
-                    sum = sum+num;
-
-                }else {
-                    char c = ISBN.charAt(i);
-                    int num = Character.getNumericValue(c);
-                    int calc = num*3;
-                    sum = sum + calc;
-                }
-
-
-
-            }
-        int modulusResult = sum%10;
-            if (modulusResult != 0){
-                caluclatedCheck = 10-modulusResult;
-            }
-            char lastChar = ISBN.charAt(12);
-            int num = Character.getNumericValue(lastChar);
-            if (num == caluclatedCheck){
-                System.out.println("Valid ISBN");
-            }else{
-                System.out.println("Invalid ISBN");
-                System.out.println("Your check digit is: " + num + " It should have been "+ caluclatedCheck);
+        for (int i = 0; i < 12; i++) {
+            int num = Character.getNumericValue(ISBN.charAt(i));
+            if (i % 2 == 0) {
+                sum += num;
+            } else {
+                sum += num * 3;
             }
         }
 
-        }
+        int calculatedCheck = (10 - (sum % 10)) % 10;
 
+        if (providedCheckInt == calculatedCheck) {
+            System.out.println("ISBN validated");
+        } else {
+            System.out.println("ISBN NOT validated");
+            System.out.println("Check num should be: " + calculatedCheck + " Your check num was: " + providedCheckInt);
+        }
+    }
+}
