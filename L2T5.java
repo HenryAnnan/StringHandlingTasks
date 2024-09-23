@@ -23,7 +23,7 @@ public class L2T5 {
             }
         }
         while (!l2Correct){
-            System.out.println("Select Letter 1");
+            System.out.println("Select Letter 2");
             String guess = input.nextLine().toLowerCase();
             if (guess.equals("a")){
                 System.out.println("RA____");
@@ -33,7 +33,7 @@ public class L2T5 {
             }
         }
         while (!l3Correct){
-            System.out.println("Select Letter 1");
+            System.out.println("Select Letter 3");
             String guess = input.nextLine().toLowerCase();
             if (guess.equals("n")){
                 System.out.println("RAN___");
@@ -43,9 +43,9 @@ public class L2T5 {
             }
         }
         while (!l4Correct){
-            System.out.println("Select Letter 1");
+            System.out.println("Select Letter 4");
             String guess = input.nextLine().toLowerCase();
-            if (guess == "d"){
+            if (guess.equals("d")){
                 System.out.println("RAND__");
                 l4Correct = true;
             }else {
@@ -53,9 +53,9 @@ public class L2T5 {
             }
         }
         while (!l5Correct){
-            System.out.println("Select Letter 1");
+            System.out.println("Select Letter 5");
             String guess = input.nextLine().toLowerCase();
-            if (guess == "o"){
+            if (guess.equals("o")){
                 System.out.println("RANDO_");
                 l5Correct = true;
             }else {
@@ -63,9 +63,9 @@ public class L2T5 {
             }
         }
         while (!l6Correct){
-            System.out.println("Select Letter 1");
+            System.out.println("Select Letter 6");
             String guess = input.nextLine().toLowerCase();
-            if (guess == "o"){
+            if (guess.equals("m")){
                 System.out.println("RANDOM");
                 l6Correct = true;
             }else {
